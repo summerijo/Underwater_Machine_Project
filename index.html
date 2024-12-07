@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Background Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto"> <!-- Left-aligned links (Home, About) -->
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#generate">Generate</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto"> <!-- Right-aligned link (Contact) -->
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+
+
+<!-- Home Section -->
+<section id="home">
+  <video autoplay muted loop>
+    <source src="underwater.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="content">
+    <p class="m-0 fs-3 text fw-semibold">Generative Adversarial Networks</p>
+    <h1 class="m-0">underwater</h1>
+    <p class="m-0 fw-lighter">
+      The website utilizes a Generative Adversarial Network (GAN) to create stunningly realistic underwater images. By harnessing advanced AI, users can generate diverse underwater scenes, complete with vibrant marine life, coral reefs, and mysterious ocean depths. Designed for artists, researchers, and enthusiasts, this tool allows customization of image features such as water clarity, depth, and marine elements, offering an immersive experience in exploring AI-driven oceanic visuals.
+    </p>
+  </div>
+</section>
+
+
+<!-- About Section -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row mb-5 align-items-center">
+      <div class="col-12 col-md-2 text-center text-md-start">
+        <h1>About</h1>
+      </div>
+      <div class="col-12 col-md-10">
+        <p>Welcome to the Underwater Image Generator, where AI meets oceanic beauty. Using advanced GAN technology, we create lifelike underwater scenes tailored to your vision. Whether for art, research, or exploration, our platform lets you customize depth, clarity, and marine life to bring the wonders of the deep sea to life.</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="card text-bg-dark">
+          <div class="card-img-wrapper">
+            <img src="images/1.jpg" class="card-img" alt="What is GAN?">
+          </div>
+          <div class="card-img-overlay d-flex flex-column justify-content-end p-3">
+            <h5 class="card-title">What is GAN?</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="card text-bg-dark">
+          <div class="card-img-wrapper">
+            <img src="images/2.jpg" class="card-img" alt="Training the Model">
+          </div>
+          <div class="card-img-overlay d-flex flex-column justify-content-end p-3">
+            <h5 class="card-title">Training the Model</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="card text-bg-dark">
+          <div class="card-img-wrapper">
+            <img src="images/3.jpg" class="card-img" alt="Underwater Images">
+          </div>
+          <div class="card-img-overlay d-flex flex-column justify-content-end p-3">
+            <h5 class="card-title">Underwater Images</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="card text-bg-dark">
+          <div class="card-img-wrapper">
+            <img src="images/4.jpg" class="card-img" alt="How To Use The Model">
+          </div>
+          <div class="card-img-overlay d-flex flex-column justify-content-end p-3">
+            <h5 class="card-title">How To Use The Model</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="generate" class="py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 pt-2">
+        <p>
+          Create realistic underwater scenes with ease using our powerful GAN technology. Customize elements like water clarity, depth, and marine life to bring your unique vision to life. Whether for art, research, or exploration, this tool offers endless possibilities to dive into the ocean’s beauty.
+        </p>
+      </div>
+      <div class="col-md-5 text-end">
+        <h1>Generate Images</h1>
+      </div>
+    </div>
+    <div class="form-container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="image_72220.png" alt="generated image">
+        </div>
+        <div class="col-md-6">
+          Form
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Feel free to reach out for more information.</p>
+  </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
