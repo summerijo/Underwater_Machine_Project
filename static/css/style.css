@@ -65,6 +65,42 @@
   color: #ccc;
 }
 
+#home .floating-card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 3px; /* Space between the cards */
+  margin-left: 80px;
+  margin-bottom: 35px;
+}
+
+#home .floating-card,
+#home .floating-card-img {
+  padding: 10px 30px;
+  max-width: 200px;
+  text-align: center;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.45) 0%, rgba(199, 199, 199, 0.35) 35%, rgba(148, 148, 148, 0.15) 100%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font-size: 1.1rem;
+  backdrop-filter: blur(10px);
+  opacity: 0.9;
+  border: 1px solid rgba(147, 147, 147, 0.5);
+  font-family: "Montserrat", serif;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+#home .floating-card:hover,
+#home .floating-card-img:hover {
+  transform: scale(1.05);
+  opacity: 1; /* Fully opaque on hover */
+}
+
+
+
+
+
+
 /* Navbar */
 .navbar {
   background-color: transparent !important;
@@ -98,7 +134,7 @@
 }
 
 /* About Section */
-#about h1, #generate h1 {
+#about h1, #generate h1, #result h1 {
   font-family: "Bakbak One", serif;
   font-size: 4rem;
 }
@@ -153,6 +189,10 @@
 }
 
 /* Generate Section */
+#generate {
+  height: 100vh;
+}
+
 .form-container {
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   background-color: #fff;
@@ -162,6 +202,43 @@
 
 #generate img {
   width: 100%;
+}
+
+#generate .button {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #1B2A7B;
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+#generate .button:hover {
+  background-color: #293cab;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  transform: scale(1.05); /* Scale the button slightly on hover */
+}
+
+
+/* Contact Us Section*/
+#contact {
+  background-color: #1B2A7B;
+  color: #fff;
+  font-family: "Montserrat", serif;
+}
+
+#contact .email {
+  padding-left: 8rem;
+}
+
+/* Result Section */
+#result hr, #generate hr {
+  border: none;
+  height: 12px;
+  background: #d7d7d7;
+  margin: 20px 0;
+  border-radius: 10px;
+  margin-top: 35px;
 }
 
 /* Responsive Styles */
