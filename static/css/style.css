@@ -65,18 +65,39 @@
   color: #ccc;
 }
 
+/* Define the fade-in and slide-up animation */
+/* Define the fade-in and slide-up animation */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0; /* Start invisible */
+    transform: translateY(30px); /* Start below */
+    visibility: hidden; /* Ensure it's hidden initially */
+  }
+  100% {
+    opacity: 1; /* Become visible */
+    transform: translateY(0); /* Move to original position */
+    visibility: visible; /* Make it visible after the animation starts */
+  }
+}
+
+#home .floating-card-container {
+  opacity: 0; /* Make it invisible initially */
+  visibility: hidden; /* Initially hidden */
+  animation: fadeSlideUp 1.5s ease-out 1.5s forwards; /* Apply the animation with 1s delay */
+}
+
 #home .floating-card-container {
   display: flex;
   flex-direction: row;
   gap: 3px; /* Space between the cards */
-  margin-left: 80px;
-  margin-bottom: 35px;
+  margin-left: 100px;
+  margin-bottom: 25px;
 }
 
 #home .floating-card,
 #home .floating-card-img {
   padding: 10px 30px;
-  max-width: 200px;
+  max-width: 320px;
   text-align: center;
   border-radius: 10px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.45) 0%, rgba(199, 199, 199, 0.35) 35%, rgba(148, 148, 148, 0.15) 100%);
@@ -96,10 +117,38 @@
   opacity: 1; /* Fully opaque on hover */
 }
 
+#home .floating-card .description {
+  font-size: small;
+}
 
+#home .floating-card-img {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Vertical alignment */
+  align-items: center;    /* Center the images horizontally */  /* Set a fixed height for the div */
+  justify-content: flex-start; /* Ensure images align to the top of the container */
+}
 
+#home .floating-card-img .overlapping-image {
+  position: absolute;
+  width: 40px; /* Smaller size */
+  height: 40px; /* Smaller size */
+  border-radius: 50%; /* Circular images */
+  object-fit: cover; /* Ensures the image fits inside the circle */
+  z-index: 1; /* Ensures the images stack */
+}
 
+#home .floating-card-img img:nth-child(1) {
+  top: 0;
+}
 
+#home .floating-card-img img:nth-child(2) {
+  top: 30px; /* Adjust the overlap as needed */
+}
+
+#home .floating-card-img img:nth-child(3) {
+  top: 60px; /* Adjust the overlap as needed */
+}
 
 /* Navbar */
 .navbar {
@@ -188,10 +237,14 @@
   font-family: "Montserrat", serif;
 }
 
-/* Generate Section */
-#generate {
-  height: 100vh;
+#about .card-text {
+  font-size: small;
 }
+
+/* Generate Section */
+/* #generate {
+  height: 100vh;
+} */
 
 .form-container {
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -254,6 +307,15 @@
   #home .content p:last-child {
     font-size: 0.9rem;
   }
+
+  #home .floating-card-container {
+    margin-left: 50px; /* Reset left margin on medium screens */
+  }
+
+  #home .floating-card,
+  #home .floating-card-img {
+    font-size: 1rem; /* Decrease font size for cards */
+  }
 }
 
 @media (max-width: 768px) {
@@ -277,6 +339,15 @@
     max-width: 90%;
     padding: 0.5rem;
   }
+
+  #home .floating-card-container {
+    margin-left: 30px; /* Reset left margin on small screens */
+  }
+
+  #home .floating-card,
+  #home .floating-card-img {
+    font-size: 1rem; /* Decrease font size for cards */
+  }
 }
 
 @media (max-width: 576px) {
@@ -294,6 +365,15 @@
 
   #home .content {
     max-width: 95%;
+  }
+
+  #home .floating-card-container {
+    margin-left: 20px; /* Reset left margin on very small screens */
+  }
+
+  #home .floating-card,
+  #home .floating-card-img {
+    font-size: 0.9rem; /* Further decrease font size for cards */
   }
 }
 
@@ -314,6 +394,15 @@
     flex-direction: column;
     align-items: center;
   }
+
+  #home .floating-card-container {
+    margin-left: 10px; /* Reset left margin on very small screens */
+  }
+
+  #home .floating-card,
+  #home .floating-card-img {
+    font-size: 0.8rem; /* Decrease font size even more */
+  }
 }
 
 @media (max-width: 320px) {
@@ -328,4 +417,14 @@
   .navbar .navbar-nav .nav-link {
     padding: 5px 15px;
   }
+
+  #home .floating-card-container {
+    margin-left: 0; /* Reset left margin on ultra small screens */
+  }
+
+  #home .floating-card,
+  #home .floating-card-img {
+    font-size: 0.75rem; /* Reduce font size even further for small screens */
+  }
 }
+
